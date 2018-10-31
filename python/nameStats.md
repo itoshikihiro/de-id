@@ -34,20 +34,21 @@ PPV/Specificity = 0.752
 ==========================
 
 
-Examining "PTName" category.
+Examining "HCPName" category.
 
 
 ==========================
 
-Num of true positives = 29
+Num of true positives = 119
 
-Num of false positives = 952
+Num of false positives = 924
 
-Num of false negatives = 25
+Num of false negatives = 474
 
-Sensitivity/Recall = 0.537
+Sensitivity/Recall = 0.201
 
-PPV/Specificity = 0.752
+PPV/Specificity = 0.76
 
 ==========================
+
 
