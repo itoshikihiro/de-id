@@ -3,10 +3,10 @@ import sys
 import nltk
 from nltk.corpus import stopwords
 
-
+#enlish environment
 stop = stopwords.words('english')
 
-
+#it is require by nltk
 def ie_preprocess(document):
     document = ' '.join([i for i in document.split() if i not in stop])
     sentences = nltk.sent_tokenize(document)
@@ -14,7 +14,7 @@ def ie_preprocess(document):
     sentences = [nltk.pos_tag(sent) for sent in sentences]
     return sentences
 
-
+# the actual function to find names by using nltk
 def extract_names(document):
     names = []
     sentences = ie_preprocess(document)
@@ -38,6 +38,7 @@ def check_for_name(patient,note,chunk, output_handle):
     # for each one write the results: "Start Start END"
     # Also for debugging purposes display on the screen (and don't write to file) 
     # the start, end and the actual personal information that we found
+    # Although I extract names, the finding in the chunk takes a long time. 
     names = extract_names(chunk);
     for name in names:
     	ph_reg=re.compile(name);
